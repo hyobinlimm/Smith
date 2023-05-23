@@ -1,0 +1,17 @@
+{
+   "1":{
+      "Handle_ID":"H001",
+      "Handle_Model":"HM001",
+      "Handle_Image":"HI001"
+   },
+   "2":{
+      "Handle_ID":"H002",
+      "Handle_Model":"HM002",
+      "Handle_Image":"HI002"
+   },
+   "3":{
+      "Handle_ID":"H003",
+      "Handle_Model":"HM003",
+      "Handle_Image":"HI003"
+   }
+}

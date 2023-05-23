@@ -1,0 +1,198 @@
+{
+  "1001": {
+    "Scene": "#1: Main Menu",
+    "Name": "TitleBGM",
+    "Type": "Background",
+    "FileName": "BGM_MainMenu",
+    "Loop": "TRUE"
+  },
+  "1002": {
+    "Scene": "#2: Game Scene",
+    "Name": "GameBGM",
+    "Type": "Background",
+    "FileName": "BGM_GameScene",
+    "Loop": "TRUE"
+  },
+  "2001": {
+    "Scene": "#2: Game Scene",
+    "Name": "Menu_Move",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Menu_Move",
+    "Loop": "FALSE"
+  },
+  "2002": {
+    "Scene": "#2: Game Scene",
+    "Name": "Menu_Select",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Menu_Select",
+    "Loop": "FALSE"
+  },
+  "2003": {
+    "Scene": "#2: Game Scene",
+    "Name": "Char_Walk",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Walk2",
+    "Loop": "FALSE"
+  },
+  "2004": {
+    "Scene": "#2: Game Scene",
+    "Name": "Door_Open",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Door_Open",
+    "Loop": "FALSE"
+  },
+  "2005": {
+    "Scene": "#2: Game Scene",
+    "Name": "Door_Close",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Door_Close",
+    "Loop": "FALSE"
+  },
+  "2006": {
+    "Scene": "#2: Game Scene",
+    "Name": "Char_Speechbubble",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_SpeechBubble_Pop1",
+    "Loop": "FALSE"
+  },
+  "2007": {
+    "Scene": "#2: Game Scene",
+    "Name": "QuestPaper_Open",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Paper_Open",
+    "Loop": "FALSE"
+  },
+  "2008": {
+    "Scene": "#2: Game Scene",
+    "Name": "QuestPaper_Close",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Paper_Close",
+    "Loop": "FALSE"
+  },
+  "2009": {
+    "Scene": "#2: Game Scene",
+    "Name": "MonsterBook_Open",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Paper_Open",
+    "Loop": "FALSE"
+  },
+  "2010": {
+    "Scene": "#2: Game Scene",
+    "Name": "MonsterBook_Close",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Paper_Close",
+    "Loop": "FALSE"
+  },
+  "2011": {
+    "Scene": "#2: Game Scene",
+    "Name": "Minigame_Interact_Right",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Interact_Minigame_Right",
+    "Loop": "FALSE"
+  },
+  "2012": {
+    "Scene": "#2: Game Scene",
+    "Name": "Minigame_Interact_Wrong",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Interact_Minigame_Wrong",
+    "Loop": "FALSE"
+  },
+  "2013": {
+    "Scene": "#2: Game Scene",
+    "Name": "Minigame_Countdown",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Countdown",
+    "Loop": "FALSE"
+  },
+  "2014": {
+    "Scene": "#2: Game Scene",
+    "Name": "Minigame_Melting",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Minigame1_Melting_Fire1",
+    "Loop": "FALSE"
+  },
+  "2015": {
+    "Scene": "#2: Game Scene",
+    "Name": "Minigame_Casting",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Minigame2_Casting_Pour1",
+    "Loop": "FALSE"
+  },
+  "2016": {
+    "Scene": "#2: Game Scene",
+    "Name": "Minigame_Forging",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Minigame3_Forging_Hammer1",
+    "Loop": "FALSE"
+  },
+  "2017": {
+    "Scene": "#2: Game Scene",
+    "Name": "Minigame_Enchant",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Minigame4_Enchant_Powder1",
+    "Loop": "FALSE"
+  },
+  "2018": {
+    "Scene": "#2: Game Scene",
+    "Name": "Handle_Put",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Handle_Put2",
+    "Loop": "FALSE"
+  },
+  "2019": {
+    "Scene": "#2: Game Scene",
+    "Name": "Bell_Finish",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Bell2",
+    "Loop": "FALSE"
+  },
+  "2020": {
+    "Scene": "#2: Game Scene",
+    "Name": "Result_Weapon_Good",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Result_Weapon_Good2",
+    "Loop": "FALSE"
+  },
+  "2021": {
+    "Scene": "#2: Game Scene",
+    "Name": "Result_Weapon_Bad",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Result_Weapon_Bad2",
+    "Loop": "FALSE"
+  },
+  "2022": {
+    "Scene": "#2: Game Scene",
+    "Name": "Minigame_Success",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Minigame_Success",
+    "Loop": "FALSE"
+  },
+  "2023": {
+    "Scene": "#2: Game Scene",
+    "Name": "Minigame_Fail",
+    "Type": "Effect(SFX)",
+    "FileName": "SFX_Minigame_Fail1",
+    "Loop": "FALSE"
+  },
+  "1003": {
+    "Scene": "#3: Bad Ending Scene",
+    "Name": "BadEndingBGM",
+    "Type": "Background",
+    "FileName": "BGM_BadEnding",
+    "Loop": "FALSE"
+  },
+  "1004": {
+    "Scene": "#4: Normal Ending Scene",
+    "Name": "NormalEndingBGM",
+    "Type": "Background",
+    "FileName": "BGM_NormalEnding",
+    "Loop": "FALSE"
+  },
+  "1005": {
+    "Scene": "#5: Happy Ending Scene",
+    "Name": "HappyEndingBGM",
+    "Type": "Background",
+    "FileName": "BGM_HappyEnding",
+    "Loop": "FALSE"
+  }
+}

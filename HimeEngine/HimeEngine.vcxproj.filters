@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="GraphiceEngine">
+      <UniqueIdentifier>{161b8a7f-35ff-4ceb-9fbb-05c12023af23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{a5378dd1-8c3c-4e6f-864b-6233a2163e20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ASEParser">
+      <UniqueIdentifier>{e6769083-5172-41f6-ad9b-5997ba48d5df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects&amp;InputLayouts">
+      <UniqueIdentifier>{5d9fd47b-d344-4b21-a696-041e2523d246}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{8f5c36f3-fa5c-4420-9e41-53be7588a659}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory">
+      <UniqueIdentifier>{40ab3245-f697-479a-a7d7-e6349868bb45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FX">
+      <UniqueIdentifier>{eb783e58-18e3-42e6-92a5-69f3d3afd070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\ObjectBase">
+      <UniqueIdentifier>{ac021dad-8f6d-4358-b97c-14446a19ba8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Font">
+      <UniqueIdentifier>{2229584e-443b-4885-ac41-5c2f2d7eaa96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{3efc8510-7a9e-4454-82d7-776828c35a71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="HimeEngine.h">
+      <Filter>GraphiceEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXDefine.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="HimeDevice.h">
+      <Filter>GraphiceEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="HimeRenderer.h">
+      <Filter>GraphiceEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="MathHelper.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="HimeCamera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dx11Effect.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildInfo.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometryBuffer.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects.h">
+      <Filter>Effects&amp;InputLayouts</Filter>
+    </ClInclude>
+    <ClInclude Include="InputLayouts.h">
+      <Filter>Effects&amp;InputLayouts</Filter>
+    </ClInclude>
+    <ClInclude Include="LightHelpler.h">
+      <Filter>Effects&amp;InputLayouts</Filter>
+    </ClInclude>
+    <ClInclude Include="DXObjectFactory.h">
+      <Filter>Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="HelperObjects.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="DDSTextureLoader.h">
+      <Filter>GraphiceEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinningObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="DXObjectBase.h">
+      <Filter>Objects\ObjectBase</Filter>
+    </ClInclude>
+    <ClInclude Include="IDXObjectBase.h">
+      <Filter>Objects\ObjectBase</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeInfo.h">
+      <Filter>Objects\ObjectBase</Filter>
+    </ClInclude>
+    <ClInclude Include="HimeFont.h">
+      <Filter>Font</Filter>
+    </ClInclude>
+    <ClInclude Include="HimeRendererStructs.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DXTKUIObject.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="vld.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="vld_def.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ASEParser\Animation.h">
+      <Filter>ASEParser</Filter>
+    </ClInclude>
+    <ClInclude Include="ASEParser\ASEFile.h">
+      <Filter>ASEParser</Filter>
+    </ClInclude>
+    <ClInclude Include="ASEParser\CASEParser.h">
+      <Filter>ASEParser</Filter>
+    </ClInclude>
+    <ClInclude Include="ASEParser\CParsingDataClass.h">
+      <Filter>ASEParser</Filter>
+    </ClInclude>
+    <ClInclude Include="ASEParser\Lexer.h">
+      <Filter>ASEParser</Filter>
+    </ClInclude>
+    <ClInclude Include="VolumeObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="FireEffect.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HimeEngine.cpp">
+      <Filter>GraphiceEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="HimeDevice.cpp">
+      <Filter>GraphiceEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MathHelper.cpp">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="HimeCamera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometryBuffer.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Effects.cpp">
+      <Filter>Effects&amp;InputLayouts</Filter>
+    </ClCompile>
+    <ClCompile Include="InputLayouts.cpp">
+      <Filter>Effects&amp;InputLayouts</Filter>
+    </ClCompile>
+    <ClCompile Include="DXObjectFactory.cpp">
+      <Filter>Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="HelperObjects.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="DDSTextureLoader.cpp">
+      <Filter>GraphiceEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinningObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="DXObjectBase.cpp">
+      <Filter>Objects\ObjectBase</Filter>
+    </ClCompile>
+    <ClCompile Include="IDXObjectBase.cpp">
+      <Filter>Objects\ObjectBase</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeInfo.cpp">
+      <Filter>Objects\ObjectBase</Filter>
+    </ClCompile>
+    <ClCompile Include="HimeFont.cpp">
+      <Filter>Font</Filter>
+    </ClCompile>
+    <ClCompile Include="HimeRenderer.cpp">
+      <Filter>GraphiceEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="DXTKUIObject.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ASEParser\ASEFile.cpp">
+      <Filter>ASEParser</Filter>
+    </ClCompile>
+    <ClCompile Include="ASEParser\CASEParser.cpp">
+      <Filter>ASEParser</Filter>
+    </ClCompile>
+    <ClCompile Include="ASEParser\CParsingDataClass.cpp">
+      <Filter>ASEParser</Filter>
+    </ClCompile>
+    <ClCompile Include="ASEParser\Lexer.cpp">
+      <Filter>ASEParser</Filter>
+    </ClCompile>
+    <ClCompile Include="VolumeObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="FireEffect.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="FX\Basic.fx">
+      <Filter>FX</Filter>
+    </FxCompile>
+    <FxCompile Include="FX\BasicTex.fx">
+      <Filter>FX</Filter>
+    </FxCompile>
+    <FxCompile Include="FX\color.fx">
+      <Filter>FX</Filter>
+    </FxCompile>
+    <FxCompile Include="FX\LightHelper.fx">
+      <Filter>FX</Filter>
+    </FxCompile>
+    <FxCompile Include="FX\BasicTexSkin.fx">
+      <Filter>FX</Filter>
+    </FxCompile>
+    <FxCompile Include="FX\particle.fx">
+      <Filter>FX</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

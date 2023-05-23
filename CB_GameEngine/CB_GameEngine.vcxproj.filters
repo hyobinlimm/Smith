@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraController.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshRenderer.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRenderer.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CB_GameEngine.cpp">
+      <Filter>CB_GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Manager\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>Manager\SoundManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Manager\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameTimer.cpp">
+      <Filter>GameTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="JSONSetting.cpp">
+      <Filter>JSONData</Filter>
+    </ClCompile>
+    <ClCompile Include="UIManager.cpp">
+      <Filter>Manager\UIManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectDataTable.cpp">
+      <Filter>JSONData\ObjectData</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundDataTable.cpp">
+      <Filter>JSONData\SoundData</Filter>
+    </ClCompile>
+    <ClCompile Include="UIDataTable.cpp">
+      <Filter>JSONData\UIData</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponTypeDataTable.cpp">
+      <Filter>JSONData\WeaponTypeData</Filter>
+    </ClCompile>
+    <ClCompile Include="MatDataTable.cpp">
+      <Filter>JSONData\MatData</Filter>
+    </ClCompile>
+    <ClCompile Include="EnchantDataTable.cpp">
+      <Filter>JSONData\EnchantData</Filter>
+    </ClCompile>
+    <ClCompile Include="HandleDataTable.cpp">
+      <Filter>JSONData\HandleData</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponManager.cpp">
+      <Filter>Manager\WeaponManager</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestDataTable.cpp">
+      <Filter>JSONData\QuestData</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestManager.cpp">
+      <Filter>Manager\QuestManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollider.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraController.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshRenderer.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRenderer.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CB_GameEngine.h">
+      <Filter>CB_GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Manager\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyState.h">
+      <Filter>Manager\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="VirtualKey.h">
+      <Filter>Manager\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>Manager\SoundManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Manager\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTimer.h">
+      <Filter>GameTimer</Filter>
+    </ClInclude>
+    <ClInclude Include="JSONSetting.h">
+      <Filter>JSONData</Filter>
+    </ClInclude>
+    <ClInclude Include="CBpch.h">
+      <Filter>pch</Filter>
+    </ClInclude>
+    <ClInclude Include="UIManager.h">
+      <Filter>Manager\UIManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectDataTable.h">
+      <Filter>JSONData\ObjectData</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundDataTable.h">
+      <Filter>JSONData\SoundData</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDataTable.h">
+      <Filter>JSONData\UIData</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponTypeDataTable.h">
+      <Filter>JSONData\WeaponTypeData</Filter>
+    </ClInclude>
+    <ClInclude Include="MatDataTable.h">
+      <Filter>JSONData\MatData</Filter>
+    </ClInclude>
+    <ClInclude Include="EnchantDataTable.h">
+      <Filter>JSONData\EnchantData</Filter>
+    </ClInclude>
+    <ClInclude Include="HandleDataTable.h">
+      <Filter>JSONData\HandleData</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponManager.h">
+      <Filter>Manager\WeaponManager</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestDataTable.h">
+      <Filter>JSONData\QuestData</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestManager.h">
+      <Filter>Manager\QuestManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Components">
+      <UniqueIdentifier>{431d2916-441b-427a-860d-55684944a7a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{c7219a0a-7d5d-4d6d-8f36-0e97133b7b9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{55803ae8-de43-402b-82ca-75839187e2b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CB_GameEngine">
+      <UniqueIdentifier>{5e2225da-bb39-4a8f-8c32-4a06a64a8d84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{db12c88a-d26e-4131-9edd-4c7dec891912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\InputManager">
+      <UniqueIdentifier>{0aa21d50-ba27-4db9-b1c8-fce683c3bd3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\SoundManager">
+      <UniqueIdentifier>{8609de3a-7f9c-43ae-bedc-ab027d822b44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\SceneManager">
+      <UniqueIdentifier>{7d6717a1-74a9-4c6b-acc2-c0c822d717cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameTimer">
+      <UniqueIdentifier>{01ebca7f-05ab-4771-af66-db0e554a5342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSONData">
+      <UniqueIdentifier>{a225e732-13d0-4413-9ef0-2fd981236daf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pch">
+      <UniqueIdentifier>{0c143c1c-3e87-4f84-878d-fff17032bb17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\UIManager">
+      <UniqueIdentifier>{9cd5044a-09c4-4c3c-ab3e-a29cefa380cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSONData\ObjectData">
+      <UniqueIdentifier>{535f0536-117a-41e3-b27d-cf92fb1dcce6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSONData\SoundData">
+      <UniqueIdentifier>{f4b58337-745e-4551-98ff-cba976bfef85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSONData\UIData">
+      <UniqueIdentifier>{b875907f-7b5f-4672-938f-4a8c456dee05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSONData\WeaponTypeData">
+      <UniqueIdentifier>{a0c849c6-2915-44cd-99a7-c78b21bfc8e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSONData\MatData">
+      <UniqueIdentifier>{46130876-5980-4b4a-8c2a-7b31d66c647f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSONData\EnchantData">
+      <UniqueIdentifier>{6389cef5-2d82-40e7-90ec-17e3b3a3362d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSONData\HandleData">
+      <UniqueIdentifier>{2241de6d-9485-4ce5-8850-f1ac66a2724f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\WeaponManager">
+      <UniqueIdentifier>{eb6c5ee9-9ec2-4846-8482-b076e60c93e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSONData\QuestData">
+      <UniqueIdentifier>{0f38b2e9-452d-4943-82c0-62769ff2fc10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\QuestManager">
+      <UniqueIdentifier>{5fb40ee9-917f-4d9f-b789-33abd3194f0c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

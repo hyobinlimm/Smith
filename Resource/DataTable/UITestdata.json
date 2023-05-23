@@ -1,0 +1,920 @@
+{
+  "10001": {
+    "Name": "Clock",
+    "Type": "MainUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "Clock"
+  },
+  "10002": {
+    "Name": "Fame",
+    "Type": "MainUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "Fame"
+  },
+  "10003": {
+    "Name": "MainButton",
+    "Type": "MainUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "MainButton"
+  },
+  "20001": {
+    "Name": "QuestBG",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIBG"
+  },
+  "20002": {
+    "Name": "QuestFG",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIFG"
+  },
+  "20003": {
+    "Name": "QuestText1",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20004": {
+    "Name": "QuestText2",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20005": {
+    "Name": "QuestText3",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20006": {
+    "Name": "QuestText4",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20007": {
+    "Name": "QuestText5",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20008": {
+    "Name": "QuestText6",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20009": {
+    "Name": "QuestText7",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20010": {
+    "Name": "QuestText8",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20011": {
+    "Name": "QuestText9",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20012": {
+    "Name": "QuestText10",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20013": {
+    "Name": "QuestText11",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20014": {
+    "Name": "QuestText12",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20015": {
+    "Name": "QuestText13",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20016": {
+    "Name": "QuestText14",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "20017": {
+    "Name": "QuestText15",
+    "Type": "QuestUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIText"
+  },
+  "30001": {
+    "Name": "BookBG",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIBG"
+  },
+  "30002": {
+    "Name": "BookCategory1",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UICategory1"
+  },
+  "30003": {
+    "Name": "BookCategory2",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UICategory2"
+  },
+  "30004": {
+    "Name": "BookCategory3",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UICategory1"
+  },
+  "30005": {
+    "Name": "BookCategory4",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UICategory2"
+  },
+  "30006": {
+    "Name": "BookCategory5",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UICategory1"
+  },
+  "30007": {
+    "Name": "BookPage11",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage1"
+  },
+  "30008": {
+    "Name": "BookPage12",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage2"
+  },
+  "30009": {
+    "Name": "BookPage21",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage1"
+  },
+  "30010": {
+    "Name": "BookPage22",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage2"
+  },
+  "30011": {
+    "Name": "BookPage31",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage1"
+  },
+  "30012": {
+    "Name": "BookPage32",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage2"
+  },
+  "30013": {
+    "Name": "BookPage41",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage1"
+  },
+  "30014": {
+    "Name": "BookPage42",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage2"
+  },
+  "30015": {
+    "Name": "BookPage51",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage1"
+  },
+  "30016": {
+    "Name": "BookPage52",
+    "Type": "BookUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage2"
+  },
+  "50001": {
+    "Name": "WeaponBG",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIBG"
+  },
+  "50002": {
+    "Name": "WeaponBox",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox"
+  },
+  "50003": {
+    "Name": "WeaponCategory1",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UICategory1"
+  },
+  "50004": {
+    "Name": "WeaponCategory2",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UICategory2"
+  },
+  "50005": {
+    "Name": "WeaponCategory3",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UICategory1"
+  },
+  "50006": {
+    "Name": "WeaponCategory4",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UICategory2"
+  },
+  "50007": {
+    "Name": "WeaponType11",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage1"
+  },
+  "50008": {
+    "Name": "WeaponType12",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage2"
+  },
+  "50009": {
+    "Name": "WeaponType21",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage1"
+  },
+  "50010": {
+    "Name": "WeaponType22",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage2"
+  },
+  "50011": {
+    "Name": "WeaponType31",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage1"
+  },
+  "50012": {
+    "Name": "WeaponType32",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage2"
+  },
+  "50013": {
+    "Name": "WeaponType41",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage1"
+  },
+  "50014": {
+    "Name": "WeaponType42",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage2"
+  },
+  "50015": {
+    "Name": "WeaponPage11",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage1"
+  },
+  "50016": {
+    "Name": "WeaponPage12",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage2"
+  },
+  "50017": {
+    "Name": "WeaponPage21",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage1"
+  },
+  "50018": {
+    "Name": "WeaponPage22",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage2"
+  },
+  "50019": {
+    "Name": "WeaponPage31",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage1"
+  },
+  "50020": {
+    "Name": "WeaponPage32",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage2"
+  },
+  "50021": {
+    "Name": "WeaponPage41",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage1"
+  },
+  "50022": {
+    "Name": "WeaponPage42",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage2"
+  },
+  "50023": {
+    "Name": "WeaponSelect11",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox1"
+  },
+  "50024": {
+    "Name": "WeaponSelect12",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox1"
+  },
+  "50025": {
+    "Name": "WeaponSelect21",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox2"
+  },
+  "50026": {
+    "Name": "WeaponSelect22",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox2"
+  },
+  "50027": {
+    "Name": "WeaponSelect31",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox1"
+  },
+  "50028": {
+    "Name": "WeaponSelect32",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox1"
+  },
+  "50029": {
+    "Name": "WeaponSelect41",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox2"
+  },
+  "50030": {
+    "Name": "WeaponSelect42",
+    "Type": "WeaponUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox2"
+  },
+  "60001": {
+    "Name": "OreBG",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIBG"
+  },
+  "60002": {
+    "Name": "OreBox",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox"
+  },
+  "60003": {
+    "Name": "OreCategory1",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UICategory1"
+  },
+  "60004": {
+    "Name": "OreCategory2",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UICategory2"
+  },
+  "60005": {
+    "Name": "OreType11",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage1"
+  },
+  "60006": {
+    "Name": "OreType12",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage2"
+  },
+  "60007": {
+    "Name": "OreType13",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage1"
+  },
+  "60008": {
+    "Name": "OreType14",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage2"
+  },
+  "60009": {
+    "Name": "OreType21",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage1"
+  },
+  "60010": {
+    "Name": "OreType22",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage2"
+  },
+  "60011": {
+    "Name": "OreType23",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage1"
+  },
+  "60012": {
+    "Name": "OreType24",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UILeftPage2"
+  },
+  "60013": {
+    "Name": "OrePage11",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage1"
+  },
+  "60014": {
+    "Name": "OrePage12",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage2"
+  },
+  "60015": {
+    "Name": "OrePage13",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage1"
+  },
+  "60016": {
+    "Name": "OrePage14",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage2"
+  },
+  "60017": {
+    "Name": "OrePage21",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage1"
+  },
+  "60018": {
+    "Name": "OrePage22",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage2"
+  },
+  "60019": {
+    "Name": "OrePage23",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage1"
+  },
+  "60020": {
+    "Name": "OrePage24",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage2"
+  },
+  "60021": {
+    "Name": "OreSelect11",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox1"
+  },
+  "60022": {
+    "Name": "OreSelect12",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox1"
+  },
+  "60023": {
+    "Name": "OreSelect13",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox2"
+  },
+  "60024": {
+    "Name": "OreSelect14",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox2"
+  },
+  "60025": {
+    "Name": "OreSelect21",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox1"
+  },
+  "60026": {
+    "Name": "OreSelect22",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox1"
+  },
+  "60027": {
+    "Name": "OreSelect23",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox2"
+  },
+  "60028": {
+    "Name": "OreSelect24",
+    "Type": "OreUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "SelectBox2"
+  },
+  "70001": {
+    "Name": "MeltBG",
+    "Type": "MeltingUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIBG"
+  },
+  "70002": {
+    "Name": "MeltAnim",
+    "Type": "MeltingUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage2"
+  },
+  "70003": {
+    "Name": "MeltBar",
+    "Type": "MeltingUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "Bar"
+  },
+  "70004": {
+    "Name": "MeltMovableBar",
+    "Type": "MeltingUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "MoveBar"
+  },
+  "90001": {
+    "Name": "HammerBG",
+    "Type": "HammeringUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIBG"
+  },
+  "90002": {
+    "Name": "HammerAnim",
+    "Type": "HammeringUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "UIRightPage2"
+  },
+  "90003": {
+    "Name": "HammerBar",
+    "Type": "HammeringUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "Bar"
+  },
+  "90004": {
+    "Name": "HammerMovableBar",
+    "Type": "HammeringUI",
+    "Left": 0,
+    "Top": 0,
+    "Right": 1920,
+    "Bottom": 1080,
+    "TexName": "MoveBar"
+  }
+}

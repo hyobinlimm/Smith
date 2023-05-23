@@ -1,0 +1,17 @@
+{
+  "20005": {
+    "Name": "floor",
+    "Type": "Static",
+    "Position.x": 0,
+    "Position.y": 0,
+    "Position.z": 0,
+    "Rotation.x": 0,
+    "Rotation.y": 0,
+    "Rotation.z": 0,
+    "Scale.x": 1,
+    "Scale.y": 1,
+    "Scale.z": 1,
+    "FileName": "floor",
+    "TexName": "stage_floor_base_"
+  }
+}

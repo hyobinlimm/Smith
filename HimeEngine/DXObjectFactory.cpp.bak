@@ -1,0 +1,582 @@
+﻿
+#include "HimeDevice.h"
+
+#include "ResourceManager.h"
+#include "GeometryBuffer.h"
+
+// 팩토리는 모든 오브젝트를 알아야 한다.
+#include "HelperObjects.h"
+#include "MeshObject.h"
+#include "SkinningObject.h"
+#include "VolumeObject.h"
+
+#include "DXObjectFactory.h"
+#include "NodeInfo.h"
+
+DXObjectFactory::DXObjectFactory()
+{
+	m_pD3dDevice = HimeDevice::GetInst()->GetD3dDevice();
+	m_pDeviceContext = HimeDevice::GetInst()->GetDeviceContext();
+
+	m_pResourceManager = ResourceManager::GetInst();
+}
+
+DXObjectFactory::~DXObjectFactory()
+{
+	if (m_MeshInfoList.size() != 0)
+	{
+		for (auto _meshInfo : m_MeshInfoList)
+		{
+			delete _meshInfo;
+		}
+	}
+	m_MeshInfoList.clear();
+}
+
+DXObjectBase* DXObjectFactory::CreateDXObject_Axis()
+{
+	ID3D11RasterizerState* _RS = HimeDevice::GetInst()->GetWireframeRS();
+
+	// DX오브젝트 자체를 만들어준다.
+	/// 특정한 한 내용이 아니라 일반화 된 오브젝트들이어야만 한다.
+	/// 예를 들어, Axis나 Grid가 아니라 HelperObject이고
+	/// 겐지나 돼지가 아니라 DXMeshObject또는 DXSkinningMeshObject이어야 한다.
+	HelperObjects* _newAsix = new HelperObjects(_RS);
+
+	// 리소스를 연결 시켜준다.
+	GeometryBuffer* _nowGBuffer = m_pResourceManager->GetGBuffer(L"Axis");
+	_newAsix->SetGeometryBuffer(_nowGBuffer->GetVertexBuffer(), _nowGBuffer->GetIndexBuffer());
+	_newAsix->SetIndexSize(_nowGBuffer->GetIndexSize());
+	return _newAsix;
+}
+
+DXObjectBase* DXObjectFactory::CreateDXObject_Grid()
+{
+	ID3D11RasterizerState* _RS = HimeDevice::GetInst()->GetWireframeRS();
+
+	HelperObjects* _newGrid = new HelperObjects(_RS);
+
+	// 리소스를 연결 시켜준다.
+	GeometryBuffer* _nowGBuffer = m_pResourceManager->GetGBuffer(L"Grid");
+	_newGrid->SetGeometryBuffer(_nowGBuffer->GetVertexBuffer(), _nowGBuffer->GetIndexBuffer());
+	_newGrid->SetIndexSize(_nowGBuffer->GetIndexSize());
+
+	return _newGrid;
+}
+
+//#pragma region MK2 오브젝트 타입마다 바깥에서 CreateDXObject 함수만 호출하는 방식(meshInfo로 내가 어떤걸 생성할지 결정)
+void DXObjectFactory::CreateDXObject_Axis(std::vector<DXObjectBase*>& Objects)
+{
+	ID3D11RasterizerState* _RS = HimeDevice::GetInst()->GetWireframeRS();
+
+	// DX오브젝트 자체를 만들어준다.
+	/// 특정한 한 내용이 아니라 일반화 된 오브젝트들이어야만 한다.
+	/// 예를 들어, Axis나 Grid가 아니라 HelperObject이고
+	/// 겐지나 돼지가 아니라 DXMeshObject또는 DXSkinningMeshObject이어야 한다.
+	HelperObjects* _newAsix = new HelperObjects(_RS);
+
+	// 노드이름없어서 만든 임시코드
+	_newAsix->m_NodeName = L"Axis";
+	_newAsix->m_isDraw = true;
+
+	// 리소스를 연결 시켜준다.
+	GeometryBuffer* _nowGBuffer = m_pResourceManager->GetGBuffer(L"Axis");
+	_newAsix->SetGeometryBuffer(_nowGBuffer->GetVertexBuffer(), _nowGBuffer->GetIndexBuffer());
+	_newAsix->SetIndexSize(_nowGBuffer->GetIndexSize());
+
+	Objects.emplace_back(_newAsix);
+
+	CreateMeshBuildInfo(_newAsix->m_NodeName, _newAsix->m_NodeName);
+}
+
+void DXObjectFactory::CreateDXObject_Grid(std::vector<DXObjectBase*>& Objects)
+{
+	ID3D11RasterizerState* _RS = HimeDevice::GetInst()->GetWireframeRS();
+
+	HelperObjects* _newGrid = new HelperObjects(_RS);
+
+	// 노드이름없어서 만든 임시코드
+	_newGrid->m_NodeName = L"Grid";
+	_newGrid->m_isDraw = true;
+
+	// 리소스를 연결 시켜준다.
+	GeometryBuffer* _nowGBuffer = m_pResourceManager->GetGBuffer(L"Grid");
+	_newGrid->SetGeometryBuffer(_nowGBuffer->GetVertexBuffer(), _nowGBuffer->GetIndexBuffer());
+	_newGrid->SetIndexSize(_nowGBuffer->GetIndexSize());
+
+	Objects.emplace_back(_newGrid);
+
+	CreateMeshBuildInfo(_newGrid->m_NodeName, _newGrid->m_NodeName);
+}
+
+#pragma region MK3 NodeTM를 지정해주는 함수들 - 상속계층도의 맨 위쪽으로 부모-자식 기능을 넣은 경우
+void DXObjectFactory::CreateMeshBuildInfo(std::wstring IDName, std::wstring nodeName)
+{
+<<<<<<< .mine
+	if (IDName == L"Smith" || IDName == L"Smith2")
+||||||| .r3717
+	if (IDName == L"Smith")
+=======
+//#여기사람있어요
+	if (IDName == L"Smith" || IDName == L"WarriorA" || IDName == L"WarriorB" || IDName == L"WarriorC" || IDName == L"WarriorD")
+>>>>>>> .r3786
+		if (nodeName != L"Center")
+			return;
+
+	/// 게임 엔진에서 object들의 이름을 넘기기 위한 구조체 
+
+	MeshBuildInfo* _newMeshInfo = new MeshBuildInfo();
+
+	_newMeshInfo->IDName = IDName;
+	_newMeshInfo->NodeName = nodeName;
+	_newMeshInfo->isDraw = true;
+	_newMeshInfo->isVolumeDraw = false;
+
+
+	if (nodeName == L"Center")
+	{
+		auto _minmaxNum = m_pResourceManager->m_minmaxList.find(_newMeshInfo->NodeName + +L"Col")->second;
+
+		_newMeshInfo->minX = _minmaxNum[0];
+		_newMeshInfo->minY = _minmaxNum[1];
+		_newMeshInfo->minZ = _minmaxNum[2];
+		_newMeshInfo->maxX = _minmaxNum[3];
+		_newMeshInfo->maxY = _minmaxNum[4];
+		_newMeshInfo->maxZ = _minmaxNum[5];
+
+		_newMeshInfo->minX2 = m_pResourceManager->colX;
+		_newMeshInfo->minZ2 = m_pResourceManager->colZ;
+		_newMeshInfo->maxX2 = m_pResourceManager->colX2;
+		_newMeshInfo->maxZ2 = m_pResourceManager->colZ2;
+		_newMeshInfo->isCol = true;
+		m_MeshInfoList.emplace_back(_newMeshInfo);
+	}
+	else
+	{
+		auto _minmaxNum = m_pResourceManager->m_minmaxList.find(_newMeshInfo->NodeName + +L"Col")->second;
+		_newMeshInfo->minX = _minmaxNum[0];
+		_newMeshInfo->minY = _minmaxNum[1];
+		_newMeshInfo->minZ = _minmaxNum[2];
+		_newMeshInfo->maxX = _minmaxNum[3];
+		_newMeshInfo->maxY = _minmaxNum[4];
+		_newMeshInfo->maxZ = _minmaxNum[5];
+
+		m_MeshInfoList.emplace_back(_newMeshInfo);
+
+		if (_newMeshInfo->NodeName == L"wall_l_tex" || _newMeshInfo->NodeName == L"floor_l_tex")
+		{
+			MeshBuildInfo* _newMeshInfo2 = new MeshBuildInfo();
+
+			_newMeshInfo2->IDName = IDName;
+			_newMeshInfo2->NodeName = nodeName + L"2";
+			_newMeshInfo2->isDraw = true;
+			_newMeshInfo2->isVolumeDraw = false;
+
+			auto _minmaxNum = m_pResourceManager->m_minmaxList.find(_newMeshInfo2->NodeName + +L"Col")->second;
+
+			_newMeshInfo2->minX = _minmaxNum[0];
+			_newMeshInfo2->minY = _minmaxNum[1];
+			_newMeshInfo2->minZ = _minmaxNum[2];
+			_newMeshInfo2->maxX = _minmaxNum[3];
+			_newMeshInfo2->maxY = _minmaxNum[4];
+			_newMeshInfo2->maxZ = _minmaxNum[5];
+
+			m_MeshInfoList.emplace_back(_newMeshInfo2);
+			_newMeshInfo2 = nullptr;
+		}
+
+
+		_newMeshInfo = nullptr;
+	}
+}
+
+void DXObjectFactory::MakeHierarchy_VS4(std::vector<DXObjectBase*>& meshObject)
+{
+	/// 벡터에 들어있는 GeomObject들의 부모-자식 관계를 만들자.
+
+	for (auto nowObj : meshObject)
+	{
+		if (nowObj->m_ParentName == L"") continue;
+
+		for (auto targetObj : meshObject)
+		{
+			if (nowObj->m_ID == targetObj->m_ID && nowObj->m_ParentName == targetObj->m_NodeName)
+			{
+				nowObj->m_pParentNodeInfo = targetObj;
+
+				break; // 찾았다면 다음 부모를 찾기 위해 안쪽 for문 탈출. 
+			}
+			/// 부모의 이름이 있는데, 위에서 결국 부모를 못찾은 경우
+			/*else if (nowObj->m_ParentName.size() != 0)
+			{
+				// 이러면 뭐가 문제가 있어서 결국 부모를 못찾은 것이다.
+				int kk = 0;
+			}*/
+		}
+	}
+}
+
+void DXObjectFactory::MakeHierarchy_VS3(std::vector<DXObjectBase*>& meshObject)
+{
+	/// 벡터에 들어있는 GeomObject들의 부모-자식 관계를 만들자.
+
+	bool _isParentFounded = false;
+
+	// 1. for each를 사용해 이중포문을 돌면서,
+	// 나의 m_ParentNodeName과 같은 targetmesh의 mNodeName 있는지 찾는다.
+	for (size_t i = 0; i < meshObject.size(); i++)
+	{
+		_isParentFounded = false;
+
+		for (size_t j = 0; j < meshObject.size(); j++)
+		{
+			//	1-1. 나의 mNodeName과 targetmesh의 mNodeName 같다면 무시한다. 
+			if (meshObject[i]->m_NodeName == meshObject[j]->m_NodeName)
+			{
+				meshObject[i]->m_pParentNodeInfo = nullptr;
+				continue;
+			}
+
+			//	2. 찾았다면 나의  m_ParentNode 에 GeomObject의 주소를 넣어준다. 
+			if (meshObject[i]->m_ParentName == meshObject[j]->m_NodeName)
+			{
+				meshObject[i]->m_pParentNodeInfo = meshObject[j];
+
+				_isParentFounded = true;
+				break;
+			}
+		}
+
+		/// 부모의 이름이 있는데, 위에서 결국 부모를 못찾은 경우
+		// 부모의 이름이 있는데
+		if (meshObject[i]->m_ParentName.size() != 0)
+		{
+			// 이러면 뭐가 문제가 있어서 결국 부모를 못찾은 것이다.
+			if (_isParentFounded == false)
+			{
+				int kk = 0;
+			}
+		}
+	}
+}
+
+void DXObjectFactory::MakeLocalTM_VS3(std::vector<DXObjectBase*>& meshObject)
+{
+	/// LocalTM의 초기값을 NodeTM들로부터 만들어 준다.
+	/// (나의 NodeTM과 부모의 NodeTM의 역행렬을 이용해서)
+
+	for (size_t i = 0; i < meshObject.size(); i++)
+	{
+		// 부모가 없으면 나의 nodeTM를 localTM에 넣어주자. 
+		if (meshObject[i]->m_pParentNodeInfo == nullptr)
+		{
+			meshObject[i]->m_NodeData.m_LocalTM = meshObject[i]->m_NodeData.m_NodeTM;
+
+			// decompose LocalTM 
+			meshObject[i]->DecomposeLocalTM();
+
+			continue;
+		}
+
+		// _nowMesh의 부모 NodeTM의 역행렬을 얻어오자. 
+		XMMATRIX _ParentNodeTM = ::XMLoadFloat4x4(&meshObject[i]->m_pParentNodeInfo->m_NodeData.m_NodeTM);
+		XMMATRIX _parentInverseNodeTM = XMMatrixInverse(nullptr, _ParentNodeTM);
+
+		// _nowMesh->LocalTM 를 구하자. 
+		// LocalTM = NodeTM * Parent’sNodeTM −1
+		meshObject[i]->m_NodeData.m_LocalTM = meshObject[i]->m_NodeData.m_NodeTM * _parentInverseNodeTM;
+
+		// 내 노드TM(WorldTM)은 내 부모의 노드TM(WorldTM)에 내 로컬TM을 곱한 것과 같다.
+		/// meshObject[i]->m_NodeData.m_NodeTM = meshObject[i]->m_NodeData.m_LocalTM * _ParentNodeTM;
+
+		// decompose LocalTM 
+		meshObject[i]->DecomposeLocalTM();
+	}
+}
+
+void DXObjectFactory::MakeSkinnedNodeTM_VS3(std::vector<DXObjectBase*>& meshObject)
+{
+	std::vector<ASEParser::Bone*> _Bones;
+	std::wstring _nowSkinID; 
+
+	// skin오브젝트의 본 리스트를 저장
+	for (auto _nowObject : meshObject)
+	{
+		if (_nowObject->m_IsSkinningObj == true)
+		{
+			_nowSkinID = _nowObject->m_ID;
+			for (int i = 0; i < _nowObject->m_BoneList.size(); i++)
+			{
+				_Bones.emplace_back(_nowObject->m_BoneList[i]);
+			}
+			break;
+		}
+	}
+
+	// 본 리스트의 이름과 오브젝트의 이름을 찾아서 nodeTM를 넣어주자. 
+	for (auto _bone : _Bones)
+	{
+		for (auto _nowObject : meshObject)
+		{
+			std::string _nowNodeName;
+			_nowNodeName.assign(_nowObject->m_NodeName.begin(), _nowObject->m_NodeName.end());
+
+			if (_nowSkinID == _nowObject->m_ID && _bone->m_bone_name == _nowNodeName)
+			{
+				// 첫 nodeTM를 넣어줌. 
+				Matrix _temp1 = _nowObject->m_NodeData.m_NodeTM;
+				_bone->m_boneTM_NodeTM = _temp1;
+				//_bone->m_boneTM_NodeTM = reinterpret_cast<Matrix*>(&_nowObject->m_NodeData.m_NodeTM);
+
+				///TODO: 만약 노드가 bone이라면 안 그리도록 한다. 
+				_nowObject->m_IsBone = true;
+				//_nowObject->m_isDraw = false;
+				_nowObject->m_isDraw = true;
+
+				break; // 찾았다면 안쪽 for문을 탈출하고, 바깥 쪽 for문을 돌게 하자. 
+			}
+		}
+	}
+}
+
+#pragma endregion
+
+#pragma region MK4 엔진에서 미리 ASEparser를 로드해 놓고 있는 버전
+
+void DXObjectFactory::CreateDXObject(std::wstring IDName, std::vector<DXObjectBase*>& Objects)
+{
+	/// TODO : - 타입을 모르는데 어떻게 오브젝트를 만들 수 있을까? 
+
+	ID3D11RasterizerState* _RS = HimeDevice::GetInst()->GetSolidRS();
+
+	if (IDName == L"Axis")
+	{
+		CreateDXObject_Axis(Objects);
+	}
+	else if (IDName == L"Grid")
+	{
+		CreateDXObject_Grid(Objects);
+	}
+	else
+	{
+		// 이름을 가져와서 리소스 매니저에게 ASE 파일을 가져와 달라고 부탁.
+		m_pResourceManager->LoadASEObject_BuildInfo(IDName);
+
+		for (auto _nowKVP : m_pResourceManager->m_NodeInfoList)
+		{
+			std::wstring _nodeName = _nowKVP.first;
+			NodeInfo* _nodeInfo = _nowKVP.second;
+
+			switch (_nodeInfo->m_type)
+			{
+			case eGeomobject:
+			{
+				if (_nodeInfo->m_IsSkinningObj == false)
+				{
+					MeshObject* _newMesh = new MeshObject(_RS);
+					_newMesh->Initialize();
+
+					// ASEParser에서 받아온 내이름, 부모이름, nodeTM, 스키닝 오브젝트인지을 넣어준다. 
+					_newMesh->m_ID = IDName;
+					_newMesh->m_NodeName = m_pResourceManager->m_NodeInfoList[_nodeName]->m_NodeName;
+					_newMesh->m_ParentName = m_pResourceManager->m_NodeInfoList[_nodeName]->m_ParentName;
+					_newMesh->m_stringName.assign(_newMesh->m_NodeName.begin(), _newMesh->m_NodeName.end());
+					_newMesh->m_NodeData.m_NodeTM = m_pResourceManager->m_NodeInfoList[_nodeName]->m_NodeData.m_NodeTM;
+					_newMesh->m_IsSkinningObj = m_pResourceManager->m_NodeInfoList[_nodeName]->m_IsSkinningObj;
+					_newMesh->m_Animation_List = m_pResourceManager->m_NodeInfoList[_nodeName]->m_Animation_List;
+					_newMesh->m_LastFrame = m_pResourceManager->m_NodeInfoList[_nodeName]->m_LastFrame;
+					_newMesh->m_ticksperFrame = m_pResourceManager->m_NodeInfoList[_nodeName]->m_ticksperFrame;
+					//if (m_pResourceManager->m_NodeInfoList[_nodeName]->m_IsBone != true)
+					//{
+						_newMesh->m_isDraw = true;
+					//}
+
+					// game엔진 불러온 애를 찾아서 리소스를 연결
+					GeometryBuffer* _nowGBuffer = m_pResourceManager->GetGBuffer(_nodeName);
+					_newMesh->SetGeometryBuffer(_nowGBuffer->GetVertexBuffer(), _nowGBuffer->GetIndexBuffer());
+					_newMesh->SetIndexSize(_nowGBuffer->GetIndexSize());
+
+					Objects.push_back(std::move(_newMesh));
+
+					//_newMesh = nullptr;
+					CreateMeshBuildInfo(IDName, _nodeName);
+<<<<<<< .mine
+					//if (IDName == L"Smith" && _nodeName == L"Center")
+					//{
+					//	VolumeObject* _newVolume = new VolumeObject(HimeDevice::GetInst()->GetWireframeRS());
+					//	_newVolume->Initialize();
+||||||| .r3717
+					if (IDName == L"Smith" && _nodeName == L"Center")
+					{
+						VolumeObject* _newVolume = new VolumeObject(HimeDevice::GetInst()->GetWireframeRS());
+						_newVolume->Initialize();
+=======
+					//#여기사람있어요
+					if (IDName == L"Smith" && _nodeName == L"Center")
+					{
+						VolumeObject* _newVolume = new VolumeObject(HimeDevice::GetInst()->GetWireframeRS());
+						_newVolume->Initialize();
+>>>>>>> .r3786
+
+					//	// ASEParser에서 받아온 내이름, 부모이름, nodeTM, 스키닝 오브젝트인지을 넣어준다. 
+					//	_newVolume->m_NodeName = m_pResourceManager->m_NodeInfoList[_nodeName]->m_NodeName + L"Col";
+					//	_newVolume->m_ParentName = m_pResourceManager->m_NodeInfoList[_nodeName]->m_ParentName;
+					//	_newVolume->m_stringName.assign(_newVolume->m_NodeName.begin(), _newVolume->m_NodeName.end());
+					//	_newVolume->m_NodeData.m_NodeTM = m_pResourceManager->m_NodeInfoList[_nodeName]->m_NodeData.m_NodeTM;
+					//	_newVolume->m_IsSkinningObj = m_pResourceManager->m_NodeInfoList[_nodeName]->m_IsSkinningObj;
+					//	_newVolume->m_pAnimation = m_pResourceManager->m_NodeInfoList[_nodeName]->m_pAnimation;
+					//	_newVolume->m_LastFrame = m_pResourceManager->m_NodeInfoList[_nodeName]->m_LastFrame;
+					//	_newVolume->m_ticksperFrame = m_pResourceManager->m_NodeInfoList[_nodeName]->m_ticksperFrame;
+
+					//	if (_newVolume->m_pAnimation == nullptr)
+					//	{
+					//		_newVolume->m_isDraw = true;
+					//	}
+
+					//	// game엔진 불러온 애를 찾아서 리소스를 연결
+					//	GeometryBuffer* _nowVBuffer = m_pResourceManager->GetVBuffer(_nodeName);
+					//	_newVolume->SetGeometryBuffer(_nowVBuffer->GetVertexBuffer(), _nowVBuffer->GetIndexBuffer());
+					//	_newVolume->SetIndexSize(_nowVBuffer->GetIndexSize());
+
+					//	Objects.push_back(std::move(_newVolume));
+
+<<<<<<< .mine
+					//	_newVolume = nullptr;
+					//}
+					//if (IDName != L"Smith")
+					//{
+					//	VolumeObject* _newVolume = new VolumeObject(HimeDevice::GetInst()->GetWireframeRS());
+					//	_newVolume->Initialize();
+||||||| .r3717
+						_newVolume = nullptr;
+					}
+					if (IDName != L"Smith")
+					{
+						VolumeObject* _newVolume = new VolumeObject(HimeDevice::GetInst()->GetWireframeRS());
+						_newVolume->Initialize();
+=======
+						_newVolume = nullptr;
+					}
+					//#여기사람있어요
+					if (IDName != L"Smith" && IDName != L"WarriorA" && IDName != L"WarriorB" && IDName != L"WarriorC" && IDName != L"WarriorD")
+					{
+						VolumeObject* _newVolume = new VolumeObject(HimeDevice::GetInst()->GetWireframeRS());
+						_newVolume->Initialize();
+>>>>>>> .r3786
+
+					//	// ASEParser에서 받아온 내이름, 부모이름, nodeTM, 스키닝 오브젝트인지을 넣어준다. 
+					//	_newVolume->m_NodeName = m_pResourceManager->m_NodeInfoList[_nodeName]->m_NodeName + L"Col";
+					//	_newVolume->m_ParentName = m_pResourceManager->m_NodeInfoList[_nodeName]->m_ParentName;
+					//	_newVolume->m_stringName.assign(_newVolume->m_NodeName.begin(), _newVolume->m_NodeName.end());
+					//	_newVolume->m_NodeData.m_NodeTM = m_pResourceManager->m_NodeInfoList[_nodeName]->m_NodeData.m_NodeTM;
+					//	_newVolume->m_IsSkinningObj = m_pResourceManager->m_NodeInfoList[_nodeName]->m_IsSkinningObj;
+					//	_newVolume->m_pAnimation = m_pResourceManager->m_NodeInfoList[_nodeName]->m_pAnimation;
+					//	_newVolume->m_LastFrame = m_pResourceManager->m_NodeInfoList[_nodeName]->m_LastFrame;
+					//	_newVolume->m_ticksperFrame = m_pResourceManager->m_NodeInfoList[_nodeName]->m_ticksperFrame;
+
+					//	if (_newVolume->m_pAnimation == nullptr)
+					//	{
+					//		_newVolume->m_isDraw = true;
+					//	}
+
+					//	// game엔진 불러온 애를 찾아서 리소스를 연결
+					//	GeometryBuffer* _nowVBuffer = m_pResourceManager->GetVBuffer(_nodeName);
+					//	_newVolume->SetGeometryBuffer(_nowVBuffer->GetVertexBuffer(), _nowVBuffer->GetIndexBuffer());
+					//	_newVolume->SetIndexSize(_nowVBuffer->GetIndexSize());
+
+					//	Objects.push_back(std::move(_newVolume));
+
+					//	_newVolume = nullptr;
+
+					//	if (m_pResourceManager->m_NodeInfoList[_nodeName]->m_NodeName == L"wall_l_tex" || m_pResourceManager->m_NodeInfoList[_nodeName]->m_NodeName == L"floor_l_tex")
+					//	{
+					//		VolumeObject* _newVolume = new VolumeObject(HimeDevice::GetInst()->GetWireframeRS());
+					//		_newVolume->Initialize();
+
+					//		// ASEParser에서 받아온 내이름, 부모이름, nodeTM, 스키닝 오브젝트인지을 넣어준다. 
+					//		_newVolume->m_NodeName = m_pResourceManager->m_NodeInfoList[_nodeName]->m_NodeName + L"2" + L"Col";
+					//		_newVolume->m_ParentName = m_pResourceManager->m_NodeInfoList[_nodeName]->m_ParentName;
+					//		_newVolume->m_stringName.assign(_newVolume->m_NodeName.begin(), _newVolume->m_NodeName.end());
+					//		_newVolume->m_NodeData.m_NodeTM = m_pResourceManager->m_NodeInfoList[_nodeName]->m_NodeData.m_NodeTM;
+					//		_newVolume->m_IsSkinningObj = m_pResourceManager->m_NodeInfoList[_nodeName]->m_IsSkinningObj;
+					//		_newVolume->m_pAnimation = m_pResourceManager->m_NodeInfoList[_nodeName]->m_pAnimation;
+					//		_newVolume->m_LastFrame = m_pResourceManager->m_NodeInfoList[_nodeName]->m_LastFrame;
+					//		_newVolume->m_ticksperFrame = m_pResourceManager->m_NodeInfoList[_nodeName]->m_ticksperFrame;
+
+					//		if (_newVolume->m_pAnimation == nullptr)
+					//		{
+					//			_newVolume->m_isDraw = true;
+					//		}
+
+					//		// game엔진 불러온 애를 찾아서 리소스를 연결
+					//		GeometryBuffer* _nowVBuffer = m_pResourceManager->GetVBuffer(_nodeName + L"2");
+					//		_newVolume->SetGeometryBuffer(_nowVBuffer->GetVertexBuffer(), _nowVBuffer->GetIndexBuffer());
+					//		_newVolume->SetIndexSize(_nowVBuffer->GetIndexSize());
+
+					//		Objects.push_back(std::move(_newVolume));
+
+					//		_newVolume = nullptr;
+					//	}
+					//}
+				}
+				else
+				{
+					SkinningObject* _newMesh = new SkinningObject(_RS);
+					_newMesh->Initialize();
+
+					// ASEParser에서 받아온 내이름, 부모이름, nodeTM, 스키닝 오브젝트인지을 넣어준다.
+					_newMesh->m_ID = IDName;
+					_newMesh->m_NodeName = m_pResourceManager->m_NodeInfoList[_nodeName]->m_NodeName;
+					_newMesh->m_ParentName = m_pResourceManager->m_NodeInfoList[_nodeName]->m_ParentName;
+					_newMesh->m_stringName.assign(_newMesh->m_NodeName.begin(), _newMesh->m_NodeName.end());
+					_newMesh->m_NodeData.m_NodeTM = m_pResourceManager->m_NodeInfoList[_nodeName]->m_NodeData.m_NodeTM;
+					_newMesh->m_IsSkinningObj = m_pResourceManager->m_NodeInfoList[_nodeName]->m_IsSkinningObj;
+					_newMesh->m_BoneList = m_pResourceManager->m_NodeInfoList[_nodeName]->m_BoneList;
+					_newMesh->m_pAnimation = m_pResourceManager->m_NodeInfoList[_nodeName]->m_pAnimation;
+					_newMesh->m_LastFrame = m_pResourceManager->m_NodeInfoList[_nodeName]->m_LastFrame;
+					_newMesh->m_ticksperFrame = m_pResourceManager->m_NodeInfoList[_nodeName]->m_ticksperFrame;
+					_newMesh->m_IsBone = false;
+					_newMesh->m_isDraw = true;
+
+					// 텍스처를 연결해준다.
+					//_newMesh->SetTexResource(IDName);
+
+					// game엔진 불러온 애를 찾아서 리소스를 연결
+					GeometryBuffer* _nowGBuffer = m_pResourceManager->GetGBuffer(_nodeName);
+					_newMesh->SetGeometryBuffer(_nowGBuffer->GetVertexBuffer(), _nowGBuffer->GetIndexBuffer());
+					_newMesh->SetIndexSize(_nowGBuffer->GetIndexSize());
+
+					Objects.push_back(std::move(_newMesh));
+
+					_newMesh = nullptr;
+					CreateMeshBuildInfo(IDName, _nodeName);
+				}
+
+			}
+			break;
+
+			default:
+				break;
+			}
+		}
+		// m_IKJoe가 들고있는 GeomObject의 부모 - 자식 관계를 만들어주자.
+		MakeHierarchy_VS4(Objects);
+
+		// LocalTM의 초기값을 NodeTM들로부터 만들어 준다.
+		MakeLocalTM_VS3(Objects);
+
+		// 오브젝트 들에서 본의 nodeTM과 worldTM를 받아서 넣어주자. 
+		MakeSkinnedNodeTM_VS3(Objects);
+
+		for (auto _object : Objects)
+		{
+			if (_object->m_isDraw == true)
+			{
+				// 내가 그릴 애면 텍스처를 넣어주자. 
+				_object->SetTexResource(IDName);
+			}
+		}
+	}
+}
+
+#pragma endregion

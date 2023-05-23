@@ -1,0 +1,14 @@
+{
+   "1001":{
+      "Name":"Main",
+      "Type":"MainTheme",
+      "FileName":"Test_BGM",
+      "Loop":"TRUE"
+   },
+   "2001":{
+      "Name":"Forge",
+      "Type":"EffectSound",
+      "FileName":"Effect_Forging",
+      "Loop":"FALSE"
+   }
+}

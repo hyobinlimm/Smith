@@ -1,0 +1,32 @@
+{
+  "10001": {
+    "Name": "Smith",
+    "Type": "Player",
+    "Position.x": 0,
+    "Position.y": 0,
+    "Position.z": 0,
+    "Rotation.x": 0,
+    "Rotation.y": 0,
+    "Rotation.z": 0,
+    "Scale.x": 1,
+    "Scale.y": 1,
+    "Scale.z": 1,
+    "FileName": "character_smith_test001",
+    "TexName": "004_anvil_basecolor"
+  },
+  "20006": {
+    "Name": "Floor",
+    "Type": "Static",
+    "Position.x": 0,
+    "Position.y": 0,
+    "Position.z": 0,
+    "Rotation.x": 0,
+    "Rotation.y": 0,
+    "Rotation.z": 0,
+    "Scale.x": 1,
+    "Scale.y": 1,
+    "Scale.z": 1,
+    "FileName": "floor",
+    "TexName": "floor_basecolor"
+  }
+}

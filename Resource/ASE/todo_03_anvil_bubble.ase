@@ -1,0 +1,11 @@
+*3DSMAX_ASCIIEXPORT	200
+*COMMENT "Ascii Scene Exporter v2.90"
+*SCENE {
+	*SCENE_FILENAME "C:\Users\KOCCA01\Desktop\todo_bubble.blend"               
+	*SCENE_FIRSTFRAME 0               
+	*SCENE_LASTFRAME 100               
+	*SCENE_FRAMESPEED 30               
+	*SCENE_TICKSPERFRAME 160               
+	*SCENE_BACKGROUND_STATIC  0.0000 0.0000 0.0000               
+	*SCENE_AMBIENT_STATIC  0.0000 0.0000 0.0000               
+}

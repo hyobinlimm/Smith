@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{4d17a6b2-767e-4316-ace2-821f262783b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{93d7d43d-e8b4-411b-8624-9dad8ef1710e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\UI">
+      <UniqueIdentifier>{fc34f804-4504-4060-b92f-fa3a1cbe66d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Controller">
+      <UniqueIdentifier>{08f78df1-4519-4b42-ac24-12747938e218}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{70730e51-c919-408d-a041-8dd174bf7ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PCH">
+      <UniqueIdentifier>{7aa0a14e-9788-43d5-9f54-75c3b232bb3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Movement">
+      <UniqueIdentifier>{50cad221-71ec-4e82-ac60-cb05640c3f37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\UserStats">
+      <UniqueIdentifier>{c4f0294a-add1-461e-a458-7febb6ba49bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\MiniGame">
+      <UniqueIdentifier>{4cc6a14d-f55b-4062-95e3-f0c61f49fd1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\WeaponQuest">
+      <UniqueIdentifier>{35a62e63-8421-4d3e-889e-44e208b3eb24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Interact">
+      <UniqueIdentifier>{d0808674-31d1-4789-8560-36d21bf1494c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ClientSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Components\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CCPch.h">
+      <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement.h">
+      <Filter>Components\Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="UserStats.h">
+      <Filter>Components\UserStats</Filter>
+    </ClInclude>
+    <ClInclude Include="UIRenderer.h">
+      <Filter>Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ControllerEnum.h">
+      <Filter>Components\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="HitMinigame.h">
+      <Filter>Components\MiniGame</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectMinigame.h">
+      <Filter>Components\MiniGame</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIPage.h">
+      <Filter>Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestUI.h">
+      <Filter>Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniGame.h">
+      <Filter>Components\MiniGame</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponQuest.h">
+      <Filter>Components\WeaponQuest</Filter>
+    </ClInclude>
+    <ClInclude Include="Interactable.h">
+      <Filter>Components\Interact</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CountDown.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleScene.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AIController.h">
+      <Filter>Components\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimState.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Components\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="TestScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement.cpp">
+      <Filter>Components\Movement</Filter>
+    </ClCompile>
+    <ClCompile Include="UserStats.cpp">
+      <Filter>Components\UserStats</Filter>
+    </ClCompile>
+    <ClCompile Include="UIRenderer.cpp">
+      <Filter>Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectMinigame.cpp">
+      <Filter>Components\MiniGame</Filter>
+    </ClCompile>
+    <ClCompile Include="HitMinigame.cpp">
+      <Filter>Components\MiniGame</Filter>
+    </ClCompile>
+    <ClCompile Include="UIPage.cpp">
+      <Filter>Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestUI.cpp">
+      <Filter>Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniGame.cpp">
+      <Filter>Components\MiniGame</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponQuest.cpp">
+      <Filter>Components\WeaponQuest</Filter>
+    </ClCompile>
+    <ClCompile Include="Interactable.cpp">
+      <Filter>Components\Interact</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CountDown.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AIController.cpp">
+      <Filter>Components\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimState.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Chew_Contents.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resource\Texture\Icon.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
